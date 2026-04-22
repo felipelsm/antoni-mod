@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "antoni-mod",
+	"version": "${version}",
+	"name": "Antoni Mod",
+	"description": "Antoni's Greatest Mod!",
+	"authors": [
+		"Antoni"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/antoni-mod/antoni.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.felipelsm.antonimod.AntoniMod"
+		],
+		"fabric-datagen": [
+			"com.felipelsm.antonimod.AntoniModDataGenerator"
+		],
+		"client": [
+			"com.felipelsm.antonimod.AntoniModClient"
+		]
+	},
+	"mixins": [
+		"antoni-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
