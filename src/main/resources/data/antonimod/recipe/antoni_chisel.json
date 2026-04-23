@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "antonimod:antoni_ore"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " D#",
+    " ID",
+    "I  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "antonimod:antoni_chisel"
+  }
+}

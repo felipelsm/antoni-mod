@@ -1,8 +1,15 @@
 {
   "item.antonimod.antoni_ore": "Antoni Ore",
   "item.antonimod.raw_antoni_ore": "Raw Antoni Ore",
+  "item.antonimod.antoni_chisel": "Antoni Chisel",
+  "item.antonimod.antoni_food": "Antoni Food",
 
   "block.antonimod.antoni_ore_block": "Antoni Ore Block",
-  "block.antonimod.antoni_block": "Antoni Block"
+  "block.antonimod.antoni_deepslate_ore_block": "Antoni Deepslate Ore Block",
+  "block.antonimod.antoni_block": "Antoni Block",
+  "block.antonimod.chiseled_antoni_block": "Chiseled Antoni Block",
+  "block.antonimod.magic_antoni_block": "Magic Antoni Block",
 
+  "itemgroup.antonimod.antoni_items": "Antoni Items",
+  "itemgroup.antonimod.antoni_blocks": "Antoni Blocks"
 }
