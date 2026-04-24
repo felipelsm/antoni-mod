@@ -2,13 +2,8 @@ package com.felipelsm.antonimod.item;
 
 import com.felipelsm.antonimod.AntoniMod;
 import com.felipelsm.antonimod.fluid.ModFluids;
-import com.felipelsm.antonimod.item.custom.ChiselItem;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import com.felipelsm.antonimod.item.custom.AntoniChiselItem;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.fluid.FlowableFluid;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.LavaFluid;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -36,7 +31,7 @@ public class ModItems
     public static final Item ANTONI_ORE = registerItem("antoni_ore", new Item(new Item.Settings()));
     public static final Item RAW_ANTONI_ORE = registerItem("raw_antoni_ore", new Item(new Item.Settings()));
 
-    public static final Item ANTONI_CHISEL = registerItem("antoni_chisel", new ChiselItem(new Item.Settings().maxDamage(64)));
+    public static final Item ANTONI_CHISEL = registerItem("antoni_chisel", new AntoniChiselItem(new Item.Settings().maxDamage(64)));
 
     public static final Item ANTONI_FOOD = registerItem("antoni_food", new Item(new Item.Settings().food(ModFoodComponents.ANTONI_FOOD)) {
         @Override
@@ -64,6 +59,7 @@ public class ModItems
     {
         AntoniMod.LOGGER.info("Registering Mod Items for " + AntoniMod.MOD_ID);
 
+        /* Register Mod Fuels */
         FuelRegistry.INSTANCE.add(ModItems.ANTONI_FUEL_BUCKET, 50000);
 //        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(ANTONI_ORE); });
 

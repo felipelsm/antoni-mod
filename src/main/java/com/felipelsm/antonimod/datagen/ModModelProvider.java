@@ -69,7 +69,7 @@ public class ModModelProvider extends FabricModelProvider {
                 ModItems.ANTONI_ORE,
                 ModItems.RAW_ANTONI_ORE,
                 ModItems.ANTONI_FOOD,
-                ModItems.ANTONI_CHISEL,
+                // ModItems.ANTONI_CHISEL, // Need to make json by hand due to Model Predicates
                 ModItems.ANTONI_FUEL_BUCKET
         );
 

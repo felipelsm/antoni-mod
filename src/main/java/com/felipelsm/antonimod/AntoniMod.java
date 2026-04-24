@@ -1,9 +1,11 @@
 package com.felipelsm.antonimod;
 
 import com.felipelsm.antonimod.block.ModBlocks;
+import com.felipelsm.antonimod.component.ModDataComponentTypes;
 import com.felipelsm.antonimod.fluid.ModFluids;
 import com.felipelsm.antonimod.item.ModItemGroups;
 import com.felipelsm.antonimod.item.ModItems;
+import com.felipelsm.antonimod.util.ModModelPredicates;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -25,6 +27,9 @@ public class AntoniMod implements ModInitializer
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+
+		ModDataComponentTypes.registerDataComponentTypes();
+		ModModelPredicates.registerModelPredicates();
 
 		LOGGER.info("Hello Fabric world!");
 	}

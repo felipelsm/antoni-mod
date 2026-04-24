@@ -1,6 +1,7 @@
 package com.felipelsm.antonimod.item.custom;
 
 import com.felipelsm.antonimod.block.ModBlocks;
+import com.felipelsm.antonimod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
@@ -17,7 +18,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
-import javax.swing.*;
 import java.util.List;
 import java.util.Map;
 
@@ -26,9 +26,9 @@ import java.util.Map;
  *
  * @Note: Affected blocks are transformed according to pre-build Map
  */
-public class ChiselItem extends Item
+public class AntoniChiselItem extends Item
 {
-    public ChiselItem(Item.Settings settings) { super(settings); }
+    public AntoniChiselItem(Item.Settings settings) { super(settings); }
 
     /**
      * Maps Chiseled blocks to their target transformations
@@ -68,6 +68,9 @@ public class ChiselItem extends Item
                         SoundEvents.BLOCK_GRINDSTONE_USE,
                         SoundCategory.BLOCKS
                 );
+
+                // Set "Coordinates" Data Component
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
 
@@ -81,6 +84,10 @@ public class ChiselItem extends Item
             tooltip.add(Text.translatable("tooltip.antonimod.antoni_chisel.shift_down"));
         } else {
             tooltip.add(Text.translatable("tooltip.antonimod.antoni_chisel"));
+        }
+
+        if (stack.get(ModDataComponentTypes.COORDINATES) != null) {
+            tooltip.add(Text.translatable("Last Block changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
 
         super.appendTooltip(stack, context, tooltip, type);
