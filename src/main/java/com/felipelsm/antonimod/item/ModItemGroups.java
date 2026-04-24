@@ -37,6 +37,19 @@ public class ModItemGroups
                         entries.add(ModBlocks.ANTONI_BLOCK);
                         entries.add(ModBlocks.CHISELED_ANTONI_BLOCK);
                         entries.add(ModBlocks.MAGIC_ANTONI_BLOCK);
+
+                        entries.add(ModBlocks.ANTONI_STAIRS);
+                        entries.add(ModBlocks.ANTONI_SLAB);
+
+                        entries.add(ModBlocks.ANTONI_BUTTON);
+                        entries.add(ModBlocks.ANTONI_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.ANTONI_FENCE);
+                        entries.add(ModBlocks.ANTONI_FENCE_GATE);
+                        entries.add(ModBlocks.ANTONI_WALL);
+
+                        entries.add(ModBlocks.ANTONI_DOOR);
+                        entries.add(ModBlocks.ANTONI_TRAPDOOR);
                     })
                     .build());
 

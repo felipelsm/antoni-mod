@@ -6,10 +6,6 @@ import com.felipelsm.antonimod.item.ModItemGroups;
 import com.felipelsm.antonimod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

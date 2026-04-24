@@ -11,6 +11,16 @@
   "block.antonimod.chiseled_antoni_block": "Chiseled Antoni Block",
   "block.antonimod.magic_antoni_block": "Magic Antoni Block",
 
+  "block.antonimod.antoni_stairs": "Antoni Stairs",
+  "block.antonimod.antoni_slab": "Antoni Slab",
+  "block.antonimod.antoni_button": "Antoni Button",
+  "block.antonimod.antoni_pressure_plate": "Antoni Pressure Plate",
+  "block.antonimod.antoni_fence": "Antoni Fence",
+  "block.antonimod.antoni_fence_gate": "Antoni Fence Gate",
+  "block.antonimod.antoni_wall": "Antoni Wall",
+  "block.antonimod.antoni_door": "Antoni Door",
+  "block.antonimod.antoni_trapdoor": "Antoni Trapdoor",
+
   "block.antonimod.antoni_fuel": "Antoni Fuel",
 
   "itemgroup.antonimod.antoni_items": "Antoni Items",

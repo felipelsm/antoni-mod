@@ -79,12 +79,107 @@ public class ModBlocks
                             .strength(1.0F, 1.0F)
                             .sounds(BlockSoundGroup.ANVIL)
             ));
+
+    public static final Block ANTONI_STAIRS = registerBlock(
+            "antoni_stairs",
+            new StairsBlock(
+                    ModBlocks.ANTONI_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+            ));
+    public static final Block ANTONI_SLAB = registerBlock(
+            "antoni_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+            ));
+
+    public static final Block ANTONI_BUTTON = registerBlock(
+            "antoni_button",
+            new ButtonBlock(
+                    BlockSetType.IRON, 2,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+                            .noCollision()
+            ));
+    public static final Block ANTONI_PRESSURE_PLATE = registerBlock(
+            "antoni_pressure_plate",
+            new PressurePlateBlock(
+                    BlockSetType.IRON,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+            ));
+
+    public static final Block ANTONI_FENCE = registerBlock(
+            "antoni_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+            ));
+    public static final Block ANTONI_FENCE_GATE = registerBlock(
+            "antoni_fence_gate",
+            new FenceGateBlock(
+                    WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+            ));
+    public static final Block ANTONI_WALL = registerBlock(
+            "antoni_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+            ));
+
+    public static final Block ANTONI_DOOR = registerBlock(
+            "antoni_door",
+            new DoorBlock(
+                    BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+                            .nonOpaque()
+            ));
+    public static final Block ANTONI_TRAPDOOR = registerBlock(
+            "antoni_trapdoor",
+            new TrapdoorBlock(
+                    BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+                            .nonOpaque()
+            ));
+
     public static final Block ANTONI_FUEL = registerBlock(
             "antoni_fuel",
             new FluidBlock(
                     ModFluids.ANTONI_FUEL,
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.WATER_BLUE)
+                            .mapColor(MapColor.TERRACOTTA_RED)
                             .replaceable()
                             .noCollision()
                             .strength(100.0F)
@@ -92,8 +187,7 @@ public class ModBlocks
                             .dropsNothing()
                             .liquid()
                             .sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)
-            )
-    );
+            ));
 
 
     private static Block registerBlock(String name, Block block)
