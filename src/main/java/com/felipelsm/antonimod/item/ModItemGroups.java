@@ -22,6 +22,7 @@ public class ModItemGroups
                         entries.add(ModItems.RAW_ANTONI_ORE);
                         entries.add(ModItems.ANTONI_CHISEL);
                         entries.add(ModItems.ANTONI_FOOD);
+                        entries.add(ModItems.ANTONI_FUEL_BUCKET);
                     })
                     .build());
 
@@ -41,10 +42,6 @@ public class ModItemGroups
 
     public static void registerItemGroups()
     {
-        AntoniMod.LOGGER.info("Registering Item Groups for " + AntoniMod.MOD_ID);
-
-
-
-        AntoniMod.LOGGER.info("Finished Registering Item Groups for " + AntoniMod.MOD_ID);
+        AntoniMod.LOGGER.info("Registered Item Groups for " + AntoniMod.MOD_ID);
     }
 }

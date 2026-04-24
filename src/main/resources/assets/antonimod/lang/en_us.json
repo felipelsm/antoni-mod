@@ -3,6 +3,7 @@
   "item.antonimod.raw_antoni_ore": "Raw Antoni Ore",
   "item.antonimod.antoni_chisel": "Antoni Chisel",
   "item.antonimod.antoni_food": "Antoni Food",
+  "item.antonimod.antoni_fuel_bucket": "Antoni Fuel Bucket",
 
   "block.antonimod.antoni_ore_block": "Antoni Ore Block",
   "block.antonimod.antoni_deepslate_ore_block": "Antoni Deepslate Ore Block",
@@ -10,6 +11,14 @@
   "block.antonimod.chiseled_antoni_block": "Chiseled Antoni Block",
   "block.antonimod.magic_antoni_block": "Magic Antoni Block",
 
+  "block.antonimod.antoni_fuel": "Antoni Fuel",
+
   "itemgroup.antonimod.antoni_items": "Antoni Items",
-  "itemgroup.antonimod.antoni_blocks": "Antoni Blocks"
+  "itemgroup.antonimod.antoni_blocks": "Antoni Blocks",
+
+  "tooltip.antonimod.magic_antoni_block": "Throw special items on top of the Magic Antoni Block to transform them into new items",
+  "tooltip.antonimod.antoni_chisel.shift_down": "Psych!",
+  "tooltip.antonimod.antoni_chisel": "Press Shift for more information",
+  "tooltip.antonimod.antoni_food": "Antoni's shittiest food. You probably shouldn't eat that...",
+  "tooltip.antonimod.antoni_fuel_bucket": "Antoni's GREATEST fuel! It's crazy good. Just don't swim in it."
 }

@@ -112,12 +112,7 @@ public class ModBlocks
     {
         AntoniMod.LOGGER.info("Registering Mod Blocks for " + AntoniMod.MOD_ID);
 
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-//            entries.add(ANTONI_BLOCK);
-//            entries.add(CHISELED_ANTONI_BLOCK);
-//            entries.add(ANTONI_ORE_BLOCK);
-//            entries.add(ANTONI_DEEPSLATE_ORE_BLOCK);
-//        });
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> { entries.add(ANTONI_BLOCK); });
 
         AntoniMod.LOGGER.info("Finished Registering Mod Blocks for " + AntoniMod.MOD_ID);
     }
