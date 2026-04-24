@@ -1,15 +1,14 @@
 package com.felipelsm.antonimod.block.custom;
 
 import com.felipelsm.antonimod.item.ModItems;
+import com.felipelsm.antonimod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -36,11 +35,16 @@ public class MagicAntoniBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity)
     {
         if (entity instanceof ItemEntity itemEntity) {
-            if (itemEntity.getStack().getItem() == ModItems.ANTONI_ORE) {
+            if (isValidItem(itemEntity.getStack())) {
                 itemEntity.setStack(new ItemStack(ModItems.ANTONI_FUEL_BUCKET, itemEntity.getStack().getCount()));
             }
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack itemStack)
+    {
+        return itemStack.isIn(ModTags.Items.TRANSFORMABLE_ANTONI_ITEM);
     }
 
     @Override
