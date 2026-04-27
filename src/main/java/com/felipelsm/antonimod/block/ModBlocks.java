@@ -1,6 +1,7 @@
 package com.felipelsm.antonimod.block;
 
 import com.felipelsm.antonimod.AntoniMod;
+import com.felipelsm.antonimod.block.custom.AntoniLampBlock;
 import com.felipelsm.antonimod.block.custom.MagicAntoniBlock;
 import com.felipelsm.antonimod.fluid.ModFluids;
 import com.felipelsm.antonimod.item.ModItemGroups;
@@ -78,6 +79,18 @@ public class ModBlocks
                             .mapColor(MapColor.DIRT_BROWN)
                             .strength(1.0F, 1.0F)
                             .sounds(BlockSoundGroup.ANVIL)
+            ));
+    public static final Block ANTONI_LAMP = registerBlock(
+            "antoni_lamp",
+            new AntoniLampBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DIRT_BROWN)
+                            .strength(2.0F, 2.0F)
+                            .sounds(BlockSoundGroup.MUD)
+                            .requiresTool()
+                            .luminance(
+                                    state -> state.get(AntoniLampBlock.ON) ? 15 : 0
+                            )
             ));
 
     public static final Block ANTONI_STAIRS = registerBlock(

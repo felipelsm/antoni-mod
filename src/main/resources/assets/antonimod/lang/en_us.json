@@ -1,6 +1,13 @@
 {
   "item.antonimod.antoni_ore": "Antoni Ore",
   "item.antonimod.raw_antoni_ore": "Raw Antoni Ore",
+  "item.antonimod.antoni_sword": "Antoni Sword",
+  "item.antonimod.antoni_shovel": "Antoni Shovel",
+  "item.antonimod.antoni_pickaxe": "Antoni Pickaxe",
+  "item.antonimod.antoni_axe": "Antoni Axe",
+  "item.antonimod.antoni_hoe": "Antoni Hoe",
+  "item.antonimod.antoni_hammer": "Antoni Hammer",
+  "item.antonimod.antoni_super_hammer": "Antoni Super Hammer",
   "item.antonimod.antoni_chisel": "Antoni Chisel",
   "item.antonimod.antoni_food": "Antoni Food",
   "item.antonimod.antoni_fuel_bucket": "Antoni Fuel Bucket",
@@ -10,6 +17,7 @@
   "block.antonimod.antoni_block": "Antoni Block",
   "block.antonimod.chiseled_antoni_block": "Chiseled Antoni Block",
   "block.antonimod.magic_antoni_block": "Magic Antoni Block",
+  "block.antonimod.antoni_lamp": "Antoni Lamp",
 
   "block.antonimod.antoni_stairs": "Antoni Stairs",
   "block.antonimod.antoni_slab": "Antoni Slab",
@@ -26,9 +34,10 @@
   "itemgroup.antonimod.antoni_items": "Antoni Items",
   "itemgroup.antonimod.antoni_blocks": "Antoni Blocks",
 
-  "tooltip.antonimod.magic_antoni_block": "Throw special items on top of the Magic Antoni Block to transform them into new items",
-  "tooltip.antonimod.antoni_chisel.shift_down": "Psych!",
-  "tooltip.antonimod.antoni_chisel": "Press Shift for more information",
   "tooltip.antonimod.antoni_food": "Antoni's shittiest food. You probably shouldn't eat that...",
-  "tooltip.antonimod.antoni_fuel_bucket": "Antoni's GREATEST fuel! It's crazy good. Just don't swim in it."
+  "tooltip.antonimod.antoni_fuel_bucket": "Antoni's GREATEST fuel! It's crazy good. Just don't swim in it.",
+  "tooltip.antonimod.shift_tooltip": "Press Shift for more information",
+  "tooltip.antonimod.antoni_chisel.shift_down": "Psych!",
+  "tooltip.antonimod.antoni_lamp.shift_down": "Chisel to switch lighting mode",
+  "tooltip.antonimod.magic_antoni_block.shift_down": "Throw special items on top of the Magic Antoni Block to transform them into new items"
 }

@@ -20,6 +20,13 @@ public class ModItemGroups
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.ANTONI_ORE);
                         entries.add(ModItems.RAW_ANTONI_ORE);
+                        entries.add(ModItems.ANTONI_SWORD);
+                        entries.add(ModItems.ANTONI_SHOVEL);
+                        entries.add(ModItems.ANTONI_PICKAXE);
+                        entries.add(ModItems.ANTONI_AXE);
+                        entries.add(ModItems.ANTONI_HOE);
+                        entries.add(ModItems.ANTONI_HAMMER);
+                        entries.add(ModItems.ANTONI_SUPER_HAMMER);
                         entries.add(ModItems.ANTONI_CHISEL);
                         entries.add(ModItems.ANTONI_FOOD);
                         entries.add(ModItems.ANTONI_FUEL_BUCKET);
@@ -37,6 +44,7 @@ public class ModItemGroups
                         entries.add(ModBlocks.ANTONI_BLOCK);
                         entries.add(ModBlocks.CHISELED_ANTONI_BLOCK);
                         entries.add(ModBlocks.MAGIC_ANTONI_BLOCK);
+                        entries.add(ModBlocks.ANTONI_LAMP);
 
                         entries.add(ModBlocks.ANTONI_STAIRS);
                         entries.add(ModBlocks.ANTONI_SLAB);

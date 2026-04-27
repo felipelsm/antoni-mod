@@ -1,8 +1,10 @@
 package com.felipelsm.antonimod.item.custom;
 
 import com.felipelsm.antonimod.block.ModBlocks;
+import com.felipelsm.antonimod.block.custom.AntoniLampBlock;
 import com.felipelsm.antonimod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
@@ -16,6 +18,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -46,36 +49,52 @@ public class AntoniChiselItem extends Item
     public ActionResult useOnBlock(ItemUsageContext context)
     {
         World world = context.getWorld();
-        Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
+        BlockPos pos = context.getBlockPos();
+        BlockState state = world.getBlockState(pos);
+        Block clickedBlock = state.getBlock();
 
+        boolean wasChiselUsed = false;
+
+        // Handle Chisel Mapping
         if (CHISEL_MAP.containsKey(clickedBlock)) {
             // Affect target block only in server world
             if(!world.isClient()) {
                 // Change chiseled block
-                world.setBlockState(context.getBlockPos(), CHISEL_MAP.get(clickedBlock).getDefaultState());
+                world.setBlockState(pos, CHISEL_MAP.get(clickedBlock).getDefaultState());
 
-                // Damage chisel
-                context.getStack().damage(
-                        1,
-                        ((ServerWorld) world),
-                        ((ServerPlayerEntity) context.getPlayer()),
-                        item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
-
-                // Play chisel sound
-                world.playSound(
-                        null,
-                        context.getBlockPos(),
-                        SoundEvents.BLOCK_GRINDSTONE_USE,
-                        SoundCategory.BLOCKS
-                );
-
-                // Set "Coordinates" Data Component
-                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+                applyChiselEffects(context, world, pos);
             }
+
+            wasChiselUsed = true;
         }
 
+        // Handle Lamps
+        if (clickedBlock instanceof AntoniLampBlock) {
+            if (!world.isClient()) {
+                // Turn lamp ON/OFF
+                //world.setBlockState(pos, clickedBlock.getDefaultState().with(ON, true));
+                world.setBlockState(pos, state.cycle(AntoniLampBlock.ON));
+                applyChiselEffects(context, world, pos);
+            }
+
+            wasChiselUsed = true;
+        }
+
+
         // Cause Use Item Animation to play
-        return ActionResult.SUCCESS;
+        return wasChiselUsed ? ActionResult.SUCCESS : ActionResult.PASS;
+    }
+
+    private void applyChiselEffects(ItemUsageContext context, World world, BlockPos pos) {
+        // Damage chisel
+        context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
+                item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
+
+        // Play sound
+        world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
+
+        // Set Data Component
+        context.getStack().set(ModDataComponentTypes.COORDINATES, pos);
     }
 
     @Override
@@ -83,7 +102,7 @@ public class AntoniChiselItem extends Item
         if (Screen.hasShiftDown()) {
             tooltip.add(Text.translatable("tooltip.antonimod.antoni_chisel.shift_down"));
         } else {
-            tooltip.add(Text.translatable("tooltip.antonimod.antoni_chisel"));
+            tooltip.add(Text.translatable("tooltip.antonimod.shift_tooltip"));
         }
 
         if (stack.get(ModDataComponentTypes.COORDINATES) != null) {
