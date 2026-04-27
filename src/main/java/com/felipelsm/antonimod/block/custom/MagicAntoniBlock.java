@@ -4,6 +4,7 @@ import com.felipelsm.antonimod.item.ModItems;
 import com.felipelsm.antonimod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -49,7 +50,11 @@ public class MagicAntoniBlock extends Block {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        tooltip.add(Text.translatable("tooltip.antonimod.magic_antoni_block"));
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.antonimod.magic_antoni_block.shift_down"));
+        } else {
+            tooltip.add(Text.translatable("tooltip.antonimod.shift_tooltip"));
+        }
 
         super.appendTooltip(stack, context, tooltip, options);
     }

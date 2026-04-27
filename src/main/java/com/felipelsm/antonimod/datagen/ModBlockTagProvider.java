@@ -1,9 +1,10 @@
 package com.felipelsm.antonimod.datagen;
 
 import com.felipelsm.antonimod.block.ModBlocks;
+import com.felipelsm.antonimod.util.ModTags;
+import com.jcraft.jorbis.Block;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -34,16 +35,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.ANTONI_BLOCK);
 
-
-
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.ANTONI_DEEPSLATE_ORE_BLOCK)
                 .add(ModBlocks.ANTONI_ORE_BLOCK)
                 .add(ModBlocks.ANTONI_BLOCK)
-                .add(ModBlocks.CHISELED_ANTONI_BLOCK);
+                .add(ModBlocks.CHISELED_ANTONI_BLOCK)
+                .add(ModBlocks.ANTONI_LAMP);
         //getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
         //getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
 
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_ANTONI_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
 
         getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.ANTONI_FENCE);

@@ -94,6 +94,64 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_ore_from_chiseled_antoni_block"));
 
         /* Shaped Recipes */
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_SWORD, 1)
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" I ")
+                .input('#', ModItems.ANTONI_ORE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_sword"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_SHOVEL, 1)
+                .pattern(" # ")
+                .pattern(" I ")
+                .pattern(" I ")
+                .input('#', ModItems.ANTONI_ORE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_shovel"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_PICKAXE, 1)
+                .pattern("###")
+                .pattern(" I ")
+                .pattern(" I ")
+                .input('#', ModItems.ANTONI_ORE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_pickaxe"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_AXE, 1)
+                .pattern(" ##")
+                .pattern(" I#")
+                .pattern(" I ")
+                .input('#', ModItems.ANTONI_ORE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_axe"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_HOE, 1)
+                .pattern("## ")
+                .pattern(" I ")
+                .pattern(" I ")
+                .input('#', ModItems.ANTONI_ORE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_hoe"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_HAMMER, 1)
+                .pattern("###")
+                .pattern("#I#")
+                .pattern(" I ")
+                .input('#', ModItems.ANTONI_ORE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_hammer"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_SUPER_HAMMER, 1)
+                .pattern("###")
+                .pattern("#I#")
+                .pattern(" I ")
+                .input('#', ModBlocks.ANTONI_BLOCK)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_super_hammer"));
+
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_CHISEL, 1)
                 .pattern(" D#")
                 .pattern(" ID")
@@ -111,5 +169,14 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .input('#', ModBlocks.CHISELED_ANTONI_BLOCK)
                 .criterion(hasItem(ModItems.ANTONI_CHISEL), conditionsFromItem(ModItems.ANTONI_CHISEL))
                 .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "magic_antoni_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ANTONI_LAMP, 1)
+                .pattern("###")
+                .pattern("#R#")
+                .pattern("###")
+                .input('#', ModBlocks.CHISELED_ANTONI_BLOCK)
+                .input('R', Items.REDSTONE)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_lamp"));
     }
 }
