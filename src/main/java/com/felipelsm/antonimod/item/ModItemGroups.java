@@ -20,6 +20,10 @@ public class ModItemGroups
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.ANTONI_ORE);
                         entries.add(ModItems.RAW_ANTONI_ORE);
+                        entries.add(ModItems.ANTONI_HELMET);
+                        entries.add(ModItems.ANTONI_CHESTPLATE);
+                        entries.add(ModItems.ANTONI_LEGGINGS);
+                        entries.add(ModItems.ANTONI_BOOTS);
                         entries.add(ModItems.ANTONI_SWORD);
                         entries.add(ModItems.ANTONI_SHOVEL);
                         entries.add(ModItems.ANTONI_PICKAXE);

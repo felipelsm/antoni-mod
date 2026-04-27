@@ -94,6 +94,35 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_ore_from_chiseled_antoni_block"));
 
         /* Shaped Recipes */
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANTONI_HELMET, 1)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("   ")
+                .input('#', ModItems.ANTONI_ORE)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_helmet"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANTONI_CHESTPLATE, 1)
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.ANTONI_ORE)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_chestplate"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANTONI_LEGGINGS, 1)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.ANTONI_ORE)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_leggings"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANTONI_BOOTS, 1)
+                .pattern("   ")
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.ANTONI_ORE)
+                .criterion(hasItem(ModItems.RAW_ANTONI_ORE), conditionsFromItem(ModItems.RAW_ANTONI_ORE))
+                .offerTo(exporter, Identifier.of(AntoniMod.MOD_ID, "antoni_boots"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ANTONI_SWORD, 1)
                 .pattern(" # ")
                 .pattern(" # ")

@@ -10,6 +10,8 @@ import com.felipelsm.antonimod.util.ModModelPredicates;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.minecraft.entity.attribute.ClampedEntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.world.gen.feature.util.CaveSurface;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

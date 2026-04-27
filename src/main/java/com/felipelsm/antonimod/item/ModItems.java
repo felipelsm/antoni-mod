@@ -38,6 +38,27 @@ public class ModItems
             new Item(new Item.Settings())
     );
 
+    public static final Item ANTONI_HELMET =registerItem("antoni_helmet",
+            new ArmorItem(ModArmorMaterials.ANTONI_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(40))
+            )
+    );
+    public static final Item ANTONI_CHESTPLATE =registerItem("antoni_chestplate",
+            new ArmorItem(ModArmorMaterials.ANTONI_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(40))
+            )
+    );
+    public static final Item ANTONI_LEGGINGS =registerItem("antoni_leggings",
+            new ArmorItem(ModArmorMaterials.ANTONI_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(40))
+            )
+    );
+    public static final Item ANTONI_BOOTS =registerItem("antoni_boots",
+            new ArmorItem(ModArmorMaterials.ANTONI_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(40))
+            )
+    );
+
     public static final Item ANTONI_SWORD = registerItem(
             "antoni_sword",
             new SwordItem(ModToolMaterials.ANTONI_ORE, new Item.Settings()

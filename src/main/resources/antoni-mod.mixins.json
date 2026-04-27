@@ -3,7 +3,8 @@
 	"package": "com.felipelsm.antonimod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"EntityAttributesMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

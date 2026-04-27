@@ -22,6 +22,19 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ANTONI_ITEM)
                 .add(ModItems.ANTONI_ORE);
 
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.ANTONI_HELMET)
+                .add(ModItems.ANTONI_CHESTPLATE)
+                .add(ModItems.ANTONI_LEGGINGS)
+                .add(ModItems.ANTONI_BOOTS);
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.ANTONI_HELMET);
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.ANTONI_CHESTPLATE);
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.ANTONI_LEGGINGS);
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+                .add(ModItems.ANTONI_BOOTS);
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.ANTONI_SWORD);
         getOrCreateTagBuilder(ItemTags.SHOVELS)

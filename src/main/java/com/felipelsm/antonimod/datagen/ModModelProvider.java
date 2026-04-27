@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Identifier;
@@ -109,6 +110,16 @@ public class ModModelProvider extends FabricModelProvider {
         );
         for (Item item : handheldItemList) {
             iModelGen.register(item, Models.HANDHELD);
+        }
+
+        List<Item> armorItemList = List.of(
+                ModItems.ANTONI_HELMET,
+                ModItems.ANTONI_CHESTPLATE,
+                ModItems.ANTONI_LEGGINGS,
+                ModItems.ANTONI_BOOTS
+        );
+        for (Item item : armorItemList) {
+            iModelGen.registerArmor((ArmorItem) item);
         }
     }
 }
